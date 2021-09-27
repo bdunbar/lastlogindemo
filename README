@@ -1,0 +1,40 @@
+Demo for
+
+1. A bash script that prints the last time each user logged in (last-login.sh)
+1. A systemd service that runs last-login.sh every 1 hour
+
+Makes liberal, perhaps excessive, use of Bash Automated Testing System (BATS) for testing.
+See https://github.com/bats-core/bats-core
+
+
+> Runs a script
+
+Usage: last-login.sh -l or --log for logger // -t or --tty for tty
+
+$ ./last-login.sh -t
+ok 0 /usr/local/bin/bats exists, continue
+1..4
+ok 1 lastlog exists and has executable permisions
+ok 2 grep exists and has executable permisions
+ok 3 awk exists and has executable permisions
+ok 4 logger exists and has executable permisions
+user lastlogin [redacted] : [redacted]
+user lastlogin [redacted] : [redacted]
+$
+
+$ ./last-login.sh -l
+ok 0 /usr/local/bin/bats exists, continue
+1..4
+ok 1 lastlog exists and has executable permisions
+ok 2 grep exists and has executable permisions
+ok 3 awk exists and has executable permisions
+ok 4 logger exists and has executable permisions
+[ see /var/log for output ]
+$
+
+> A systemd service
+
+Put the files in /etc/systemd/system
+
+Start / enable timer
+$ systemctl start a-lastlogin.service

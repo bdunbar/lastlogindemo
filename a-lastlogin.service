@@ -1,0 +1,13 @@
+# Service unit to demo lastlogin script
+# BDunbar
+
+[Unit]
+Description=LastLogin demo service
+Wants=a-lastlogin.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/last-login.sh --log
+
+[Install]
+WantedBy=multi-user.target
