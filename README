@@ -1,7 +1,7 @@
 Demo for
 
 1. A bash script that prints the last time each user logged in (last-login.sh)
-1. A systemd service that runs last-login.sh every 1 hour
+2. A systemd service that runs last-login.sh every 1 hour
 
 Makes liberal, perhaps excessive, use of Bash Automated Testing System (BATS) for testing.
 See https://github.com/bats-core/bats-core
