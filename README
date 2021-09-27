@@ -9,6 +9,8 @@ See https://github.com/bats-core/bats-core
 
 > A bash script
 
+Put 'last-login.sh' in /usr/bin.  If you put it elsewhere, update `a-lastlogin.service'/
+
 Usage: last-login.sh -l or --log for logger // -t or --tty for tty
 
 $ ./last-login.sh -t
@@ -35,6 +37,9 @@ $
 > A systemd service
 
 Put the files in /etc/systemd/system
+
+a-lastlogin.timer
+a-lastlogin.service
 
 Start / enable timer
 $ systemctl start a-lastlogin.service
