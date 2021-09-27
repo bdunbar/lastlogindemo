@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # lastlogin.sh
 # prints the last time each user logged in
-# to shell?  to the system?
-
 
 # Housekeeping
 set -o pipefail  # trace ERR through pipes
