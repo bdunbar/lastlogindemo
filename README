@@ -7,7 +7,7 @@ Makes liberal, perhaps excessive, use of Bash Automated Testing System (BATS) fo
 See https://github.com/bats-core/bats-core
 
 
-> Runs a script
+> A bash script
 
 Usage: last-login.sh -l or --log for logger // -t or --tty for tty
 
