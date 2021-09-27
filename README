@@ -6,10 +6,11 @@ Demo for
 Makes liberal, perhaps excessive, use of Bash Automated Testing System (BATS) for testing.
 See https://github.com/bats-core/bats-core
 
+Tested on arch linux [1].
 
 > A bash script
 
-Put 'last-login.sh' in /usr/bin.  If you put it elsewhere, update `a-lastlogin.service'/
+Put 'last-login.sh' in /usr/bin.  If you put it elsewhere, update `a-lastlogin.service'.
 
 Usage: last-login.sh -l or --log for logger // -t or --tty for tty
 
@@ -43,3 +44,6 @@ a-lastlogin.service
 
 Start / enable timer
 $ systemctl start a-lastlogin.service
+
+
+[1] I use Arch btw.
